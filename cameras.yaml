@@ -1,0 +1,26 @@
+# Cameras to monitor. Each entry needs a name and a YouTube live URL.
+# Add or remove entries freely - changes are picked up on restart.
+# Optional:
+#   flaky: true   marks a camera known to yoyo; recorded in incidents.
+#   note: "..."   free-text documentation; ignored by the code.
+cameras:
+  - name: "Ashland, VA (PTZ)"
+    url: "https://www.youtube.com/watch?v=wgkdREYOfw0"
+  - name: "La Grange, KY (PTZ)"
+    url: "https://www.youtube.com/watch?v=9SLt3AT0rXk"
+    note: "Reported down 2026-05-21."
+  - name: "Paradise, PA (PTZ)"
+    url: "https://www.youtube.com/watch?v=qnO188z7z5w"
+    note: "Known down at the source. Title also names the Strasburg Rail Road."
+  - name: "South Norwalk, CT (East)"
+    url: "https://www.youtube.com/watch?v=Dv2XxhsWqWY"
+  - name: "South Norwalk, CT (West)"
+    url: "https://www.youtube.com/watch?v=53R1gjL0Za0"
+  - name: "Fort Madison, IA (PTZ)"
+    url: "https://www.youtube.com/watch?v=L6eG4ahJc_Q"
+  - name: "Fort Madison, IA (Bridge PTZ)"
+    url: "https://www.youtube.com/watch?v=clH9iSEN8LA"
+  - name: "Plant City, FL (PTZ)"
+    url: "https://www.youtube.com/watch?v=hMDC4FWvqdA"
+    flaky: true
+    note: "Drops out when CSX I044 passes; I043 and Amtrak 40/41 do not."

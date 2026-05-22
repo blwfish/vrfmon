@@ -1,0 +1,7 @@
+PyYAML
+Pillow
+imagehash
+scipy
+numpy
+requests
+pytest

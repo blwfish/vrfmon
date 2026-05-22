@@ -1,0 +1,31 @@
+poll_interval_seconds: 60
+
+# pHash hamming distance: a frame within this distance of the reference
+# placard counts as DOWN. Real placard frames measure 0; non-placard images
+# measure 30+. 10 sits safely in the gap.
+placard_threshold: 10
+reference_placard: reference/placard.jpg
+
+# Consecutive cycles a camera must stay bad/good before a DOWN/RECOVERED
+# alert fires. Absorbs one-off network blips.
+down_debounce_cycles: 3
+up_debounce_cycles: 2
+
+# If at least this fraction of cameras look down in one cycle, assume the
+# monitor's own network is at fault and suppress per-camera alerts.
+all_down_fraction: 0.6
+
+yt_dlp: yt-dlp
+ffmpeg: ffmpeg
+
+# Optional: read YouTube login cookies from this browser to reach members-only
+# streams. Left blank on purpose: an authenticated resolve trips YouTube's
+# PO-token check and segment fetches return HTTP 403. Public cameras work
+# unauthenticated; members-only cameras are reported as inaccessible.
+cookies_from_browser:
+resolve_timeout_seconds: 30
+grab_timeout_seconds: 30
+
+state_file: state.json
+incident_log: incidents.jsonl
+frames_dir: frames
