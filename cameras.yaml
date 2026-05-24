@@ -5,10 +5,9 @@
 #   note: "..."   free-text documentation; ignored by the code.
 cameras:
   - name: "Ashland, VA (PTZ)"
-    url: "https://www.youtube.com/watch?v=wgkdREYOfw0"
+    url: "https://www.youtube.com/watch?v=_eArnSLGhSo"
   - name: "La Grange, KY (PTZ)"
     url: "https://www.youtube.com/watch?v=9SLt3AT0rXk"
-    note: "Reported down 2026-05-21."
   - name: "Paradise, PA (PTZ)"
     url: "https://www.youtube.com/watch?v=qnO188z7z5w"
     note: "Known down at the source. Title also names the Strasburg Rail Road."
