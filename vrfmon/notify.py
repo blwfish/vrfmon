@@ -30,10 +30,13 @@ class Notifier:
         self._last_conn_warn = 0.0
 
     def _deliver(self, text):
+        preview = text.splitlines()[0][:80]
         if self.webhook_url:
+            print(f"[notify] sending: {preview!r}")
             try:
                 resp = requests.post(self.webhook_url, json={"text": text}, timeout=10)
                 resp.raise_for_status()
+                print(f"[notify] delivered (HTTP {resp.status_code})")
                 return
             except Exception as e:
                 print(f"[notify] webhook delivery failed ({e!r}); message follows:")
