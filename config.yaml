@@ -28,4 +28,5 @@ grab_timeout_seconds: 30
 
 state_file: state.json
 incident_log: incidents.jsonl
+db_file: monitor.db
 frames_dir: frames

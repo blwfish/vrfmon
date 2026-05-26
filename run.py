@@ -14,6 +14,7 @@ import sys
 import yaml
 
 from vrfmon.classify import load_reference_hash
+from vrfmon.db import migrate_from_jsonl, open_db
 from vrfmon.monitor import run
 from vrfmon.notify import Notifier
 from vrfmon.state import load_state
@@ -37,11 +38,14 @@ def main():
     webhook = os.environ.get("SLACK_WEBHOOK_URL")
     notifier = Notifier(webhook_url=webhook)
 
+    db = open_db(cfg["db_file"])
+    migrate_from_jsonl(db, cfg["incident_log"])
+
     mode = "Slack webhook" if webhook else "console"
     print(f"VRF Monitor - {len(cameras)} camera(s), {mode} mode, "
           f"every {cfg['poll_interval_seconds']}s")
 
-    run(cameras, cfg, reference_hash, state, notifier, once="--once" in sys.argv)
+    run(cameras, cfg, reference_hash, state, notifier, db=db, once="--once" in sys.argv)
 
 
 if __name__ == "__main__":
