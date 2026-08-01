@@ -6,3 +6,4 @@ state.json
 state.json.tmp
 incidents.jsonl
 frames/
+.DS_Store
