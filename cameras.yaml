@@ -20,6 +20,8 @@ cameras:
   - name: "Fort Madison, IA (Bridge PTZ)"
     url: "https://www.youtube.com/watch?v=clH9iSEN8LA"
   - name: "Plant City, FL (PTZ)"
-    url: "https://www.youtube.com/watch?v=hMDC4FWvqdA"
+    url: "https://www.youtube.com/watch?v=IVSoVgGXDoU"
     flaky: true
-    note: "Drops out when CSX I044 passes; I043 and Amtrak 40/41 do not."
+    note: "Drops out when CSX I044 passes; I043 and Amtrak 40/41 do not. Re-streamed under a new video ID ~2026-07-11; old ID hMDC4FWvqdA now shows a dead 'streamed 1 year ago' recording."
+  - name: "Fairport, NY (West)"
+    url: "https://www.youtube.com/watch?v=XWxyuL9dctA"
