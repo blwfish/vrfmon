@@ -30,3 +30,13 @@ state_file: state.json
 incident_log: incidents.jsonl
 db_file: monitor.db
 frames_dir: frames
+
+# Chat logger (chat_run.py) - separate from the uptime monitor above.
+chat_db_file: chat.db
+chat_retention_hours: 48
+# How often the tailer checks yt-dlp's live_chat output file for new lines.
+chat_tail_interval_seconds: 5
+# Delay before restarting yt-dlp after it exits (stream ended, went offline,
+# or errored).
+chat_restart_backoff_seconds: 30
+chat_prune_interval_seconds: 1800

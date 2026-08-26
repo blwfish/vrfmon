@@ -7,3 +7,4 @@ state.json.tmp
 incidents.jsonl
 frames/
 .DS_Store
+chat.db
